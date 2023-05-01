@@ -10,13 +10,14 @@ print("a.Addition")
 print("b.Subtract")
 print("c.Multiply")
 print("d.Divide")
+print("e.All four")
 
 while True:
     # take input from the user
-    choice = input("Enter choice(a/b/c/d): ")
+    choice = input("Enter choice(a/b/c/d/e): ")
     
     # check if choice is one of the four options
-    if choice in ('a', 'b','c','d'):
+    if choice in ('a', 'b','c','d','e'):
         try:
             num1 = float(input("Enter first number: "))
             num2 = float(input("Enter second number: "))
@@ -34,6 +35,12 @@ while True:
             print(num1, "*", num2, "=", Multiplication.multiply(num1, num2))
 
         elif choice == 'd':
+            print(num1, "/", num2, "=", Division.divide(num1, num2))
+
+        elif choice == 'e':
+            print(num1, "+", num2, "=", Add.add(num1, num2))
+            print(num1, "-", num2, "=", Sub.subtract(num1, num2))
+            print(num1, "*", num2, "=", Multiplication.multiply(num1, num2))
             print(num1, "/", num2, "=", Division.divide(num1, num2))
 
 
